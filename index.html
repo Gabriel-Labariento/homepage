@@ -6,21 +6,151 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <title>Homepage</title>
 </head>
 <body>
     <header>
-        <picture>
-            <source media="(min-width:1000px)" srcset="/assets/ramen-nagi1800.png">
+        <div class="background-square"></div>
+        <picture class="my-picture">
+            <source media="(min-width:1280px)" srcset="/assets/ramen-nagi1800.png">
             <source media="(min-width: 650px)" srcset="/assets/ramen-nagi549.png">
-            <source media="(min-width: 300px)" srcset="/assets/ramen-nagi294.png">
+            <source media="(min-width: 300px)" srcset="/assets/ramen-nagi283.png">
             <img src="/assets/ramen-nagi1800.png" alt="Me in Ramen Nagi">
+            <h1 class="name playfair-display-400">Gabe Labariento</h1>
         </picture>
-        <h1 class="name playfair-display-400">Gabe Labariento</h1>
     </header>
-    <section></section>
-    <section></section>
-    <footer></footer>
+    <section class="about">
+        <div class="pseudo-image"></div>
+        <h2 class="about-title playfair-display-400">About me</h2>
+        <p class="about-text roboto-300">Hi, I’m Gabriel Labariento, a computer science student passionate about building creative and practical tech solutions. I have experience with Python, Flask, Java, JavaScript, HTML/CSS, and SQLite, and I enjoy working on projects ranging from web apps to multiplayer games. Beyond coding, I’m interested in the intersection of technology, business, and social impact, and I’m driven to keep learning, creating, and collaborating.</p>
+        <footer class="about-footer">
+            <a href="https://github.com/Gabriel-Labariento">
+                <i class="devicon-github-original-wordmark colored icon"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/gabriel-labariento/">
+                <i class="devicon-linkedin-plain icon"></i>
+            </a>
+            <a href="https://www.facebook.com/gabe.labariento">
+                <i class="devicon-facebook-plain icon"></i>
+            </a>
+        </footer>
+    </section>
+    <section class="my-work">
+        <h2 class="work-title playfair-display-400">My Work</h2>
+        <div class="cards-container">
+            <div class="card">
+            <img class="card-image" src="/assets/battleship.png" alt="Battleship game screenshot">
+            <div class="title-and-links">
+                <h3 class="project-title playfair-display-400">Battleship</h3>
+                <div class="icons">
+                    <a href="https://github.com/Gabriel-Labariento/battleship">
+                        <i class="devicon-github-original colored project-icon"></i>
+                    </a>
+                    <a href="https://gabriel-labariento.github.io/battleship/">
+                        <img class="project-icon" src="/assets/external-link.png" alt="external link to project battleship">
+                    </a>
+                </div>
+            </div>
+            <p class="project-description roboto-300">A single player battleship game versus a computer. Are you ready admiral?</p>
+            </div>
+            <div class="card">
+            <img class="card-image" src="/assets/weather-app.png" alt="Weather app screenshot">
+            <div class="title-and-links">
+                <h3 class="project-title playfair-display-400">Weather App</h3>
+                <div class="icons">
+                    <a href="https://github.com/Gabriel-Labariento/may-weather">
+                        <i class="devicon-github-original colored project-icon"></i>
+                    </a>
+                    <a href="https://gabriel-labariento.github.io/may-weather/">
+                        <img class="project-icon" src="/assets/external-link.png" alt="external link to project weather app">
+                    </a>
+                </div>
+            </div>
+            <p class="project-description roboto-300">A simple weather app utilizing the visual crossing API. Search for a city and see the weather!</p>
+            </div>
+            <div class="card">
+            <img class="card-image" src="/assets/tasks.png" alt="Tasks app screenshot">
+            <div class="title-and-links">
+                <h3 class="project-title playfair-display-400">Simple To Do List</h3>
+                <div class="icons">
+                    <a href="https://github.com/Gabriel-Labariento/tasks">
+                        <i class="devicon-github-original colored project-icon"></i>
+                    </a>
+                    <a href="https://gabriel-labariento.github.io/tasks/">
+                        <img class="project-icon" src="/assets/external-link.png" alt="external link to project tasks">
+                    </a>
+                </div>
+            </div>
+            <p class="project-description roboto-300">A simple to do app that uses local storage.</p>
+            </div>
+            <div class="card">
+            <img class="card-image" src="/assets/battleship.png" alt="Battleship game screenshot">
+            <div class="title-and-links">
+                <h3 class="project-title playfair-display-400">Battleship</h3>
+                <div class="icons">
+                    <a href="https://github.com/Gabriel-Labariento/battleship">
+                        <i class="devicon-github-original colored project-icon"></i>
+                    </a>
+                    <a href="https://gabriel-labariento.github.io/battleship/">
+                        <img class="project-icon" src="/assets/external-link.png" alt="external link to project battleship">
+                    </a>
+                </div>
+            </div>
+            <p class="project-description roboto-300">A single player battleship game versus a computer. Are you ready admiral?</p>
+            </div>
+            <div class="card">
+            <img class="card-image" src="/assets/battleship.png" alt="Battleship game screenshot">
+            <div class="title-and-links">
+                <h3 class="project-title playfair-display-400">Battleship</h3>
+                <div class="icons">
+                    <a href="https://github.com/Gabriel-Labariento/battleship">
+                        <i class="devicon-github-original colored project-icon"></i>
+                    </a>
+                    <a href="https://gabriel-labariento.github.io/battleship/">
+                        <img class="project-icon" src="/assets/external-link.png" alt="external link to project battleship">
+                    </a>
+                </div>
+            </div>
+            <p class="project-description roboto-300">A single player battleship game versus a computer. Are you ready admiral?</p>
+            </div>
+            <div class="card">
+            <img class="card-image" src="/assets/battleship.png" alt="Battleship game screenshot">
+            <div class="title-and-links">
+                <h3 class="project-title playfair-display-400">Battleship</h3>
+                <div class="icons">
+                    <a href="https://github.com/Gabriel-Labariento/battleship">
+                        <i class="devicon-github-original colored project-icon"></i>
+                    </a>
+                    <a href="https://gabriel-labariento.github.io/battleship/">
+                        <img class="project-icon" src="/assets/external-link.png" alt="external link to project battleship">
+                    </a>
+                </div>
+            </div>
+            <p class="project-description roboto-300">A single player battleship game versus a computer. Are you ready admiral?</p>
+            </div>
+        </div> 
+    </section>
+    <div class="footer-container">
+            <footer class="contact">
+            <h2 class="footer-title playfair-display-400">Contact me</h2>
+            <h3 class="footer-subtext roboto-300 contact-text">Let's work together!</h3>
+            <div class="footer-icons">
+                <a href="https://github.com/Gabriel-Labariento">
+                    <i class="devicon-github-original-wordmark colored icon"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/gabriel-labariento/">
+                    <i class="devicon-linkedin-plain icon"></i>
+                </a>
+                <a href="https://www.facebook.com/gabe.labariento">
+                    <i class="devicon-facebook-plain icon"></i>
+                </a>
+            </div>
+        </footer>
+        <div class="footer-image-container">
+            <img class="footer-img" src="/assets/mirror 300.png" alt="Mirror selfie">
+        </div>
+    </div>
 </body>
 </html>

@@ -1,3 +1,58 @@
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
 .playfair-display-400 {
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
@@ -5,4 +60,341 @@
   font-style: normal;
 }
 
-.name {}
+.roboto-300 {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 300;
+}
+
+.background-square {
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 40rem;
+    background-color: black;
+    transform: skew(0deg, -30deg) translateY(-15.5rem);
+    z-index: -1;
+    position: absolute;
+}
+
+.my-picture {
+    margin: 48px auto;
+    justify-self: center;
+    transform: scale(1.1);
+    /* display:none */
+}
+
+.name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 48px;
+  color: white;
+  margin-top: 21.875rem;
+  max-width: 18.75rem;
+  margin-left: 1rem;
+}
+
+h2 {
+  font-size: 44px;
+  text-align: center;
+  margin: 24px 0 16px 0;
+}
+
+.about{
+  margin: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-footer {
+ display: flex;
+ justify-content: center;
+ margin: 16px;
+ gap: 16px;
+}
+
+.icon {
+  font-size: 40px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+p {
+  font-size: 18.4px;
+}
+
+.cards-container {
+  display: grid;
+  gap: 5rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  padding: 1rem;
+}
+
+.card{
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: transform ease-in 0.2s;
+}
+
+.card-image {
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.project-title, .project-description{
+  padding: 0 1.5rem;
+}
+
+.project-description {
+  font-size: 0.8rem;
+  padding-bottom: 2rem;
+}
+
+.title-and-links{
+  display: flex;
+  justify-content: space-between;
+}
+
+.icons {
+  display: flex;
+  padding: 0.2rem 1.5rem 0 0;
+  gap: 1rem;
+}
+
+.project-icon{
+  font-size: 1.5rem;
+  height: 1.4rem;
+  width: auto;
+}
+
+.contact {
+  margin-top: 1.5rem;
+  background-color: whitesmoke;
+  color: black;
+  padding: 1.5rem;
+  align-content: center;
+  justify-content: center;
+}
+
+.contact-text {
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.footer-image-container, .footer-img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.psudeo-image{
+  display: none;
+}
+
+.card:hover{
+  transform: scale(1.1);
+  transition: transform ease-out 0.2s;
+}
+
+@media screen and (min-width: 650px) {
+  header{
+    position: relative;
+  }
+
+  .background-square{
+    transform: skew(0deg, -10deg) translateY(-15rem);
+  }
+  
+  .my-picture{
+    transform: scale(0.65);
+    position: absolute;
+    top: -110px;
+    left: -70px;
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+  }
+
+  .name{
+    font-size: 4.2rem;
+    min-width: 500px;
+    position: absolute;
+    transform: translate(28rem, -30.5rem); 
+    margin: 0;
+    padding: 0; 
+    text-shadow: 0px 2px rgba(0,0,0,0.59)
+  }
+  
+  .about{
+    position: relative;
+    background-color: white;
+    box-shadow: 1px 3px 7px -1px rgba(0,0,0,0.75);
+    z-index: -1; 
+    max-width: 80%;
+    transform: translate(5rem, 4rem);
+    min-height: 25rem;
+    display: block; 
+  }
+
+  .pseudo-image {
+    height: 330px;
+    width: 280px;
+    float: left;
+    margin: 0;
+    padding: 0;
+    display: inline;
+  }
+  
+  .about-title{
+    font-size: 2rem;
+    padding: 0;
+    max-width: fit-content;
+    margin: 1rem auto;
+    padding: 3rem 0 2rem 0;
+    max-width: none;
+  }
+
+  .about-text {
+    font-weight: 400;
+    color: dimgrey;
+  }
+
+  .about-text{
+    margin: 0 2rem 0 0.5rem;
+    padding-left: 1rem;
+    transform: translate(1rem);
+    font-size: 1.4rem;
+  }
+
+  .about-footer {
+    display: none;
+  }
+  
+  .my-work{
+    margin: 10rem auto;
+    padding: 3rem;
+  }
+
+  .work-title{
+    justify-self: start;
+  }
+
+  .footer-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0px;
+    background-color: whitesmoke;
+  }
+
+  .contact{
+    grid-area: 1 / 1 / 4 / 2;
+  }
+
+  .footer-title{
+    grid-area: 1 / 1/ 2/ 2;
+  }
+
+  .footer-subtext{
+    grid-area: 2 / 1 / 3 / 2;
+  }
+
+  .footer-icons{
+    grid-area: 3 / 1 / 4 / 2;
+  }
+
+  .footer-image-container{
+    grid-area: 1 / 2 / 4 / 3;
+  }
+
+  .footer-img{
+    transform: scale(0.8);
+  }
+
+}
+
+a:hover{
+  transform: scale(1.1);
+  transition: transform ease-out 0.2s;
+}
+
+@media screen and (min-width: 1280px) {
+  .background-square{
+    transform: skew(0deg, -10deg) translateY(-20rem) scaleY(1.5);
+  }
+
+  .my-picture{
+    position: absolute;
+    transform: scale(0.5);
+    top: -275px;
+    left: -180px;
+  }
+
+  .name{
+    font-size: 7rem;
+    min-width: 1000px;
+    position: absolute;
+    transform: translate(2rem); 
+  }
+
+  .about{
+    max-width: 50%;
+    transform: translate(39rem, 4rem);
+    margin: 0;
+    padding: 0;
+    z-index: 0
+  }
+
+  .about-text{
+    font-size: 1.4rem;
+    margin: 0;
+    padding: 0 1.5rem 0 0.5rem;
+  }
+
+  .pseudo-image{
+    display: none;
+  }
+
+  .about-title{
+    font-size: 3rem;
+    padding: 0;
+    max-width: fit-content;
+    margin: 0 auto;
+    padding: 3rem 0 1rem 1.5rem;
+    max-width: none;
+    text-align: left;
+  }
+
+  .about-footer{
+    display: flex;
+    justify-content: flex-end;
+    isolation: isolate;
+    z-index: 10;
+  }
+
+  a:hover{
+    transform: scale(1.1);
+    transition: transform ease-out 0.2s;
+  }
+
+  .my-work{
+    padding: 2rem;
+  }
+}
